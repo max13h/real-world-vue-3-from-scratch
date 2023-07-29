@@ -1,0 +1,84 @@
+{
+  "events": [
+    {
+      "id": 802,
+      "title": "Non sit.",
+      "description": "Qui eos cum doloremque.",
+      "location": "West Hiedimouth",
+      "date": "2023-10-10 20:27",
+      "organizer": "Myron Zemlak MD"
+    },
+    {
+      "id": 337,
+      "title": "Fuga ullam.",
+      "description": "Eum molestiae velit repudiandae explicabo.",
+      "location": "South Leonhaven",
+      "date": "2023-09-12 20:21",
+      "organizer": "Donte Hilpert"
+    },
+    {
+      "id": 24,
+      "title": "Soluta vel.",
+      "description": "Molestias repudiandae similique fuga.",
+      "location": "Framiville",
+      "date": "2023-10-20 06:44",
+      "organizer": "Luciano Graham DDS"
+    },
+    {
+      "id": 102,
+      "title": "Aut corrupti.",
+      "description": "Voluptas in officia aut quia.",
+      "location": "South Bo",
+      "date": "2023-10-30 05:02",
+      "organizer": "Hellen Schamberger"
+    },
+    {
+      "id": 93,
+      "title": "Et sed debitis.",
+      "description": "Eveniet eos iusto alias.",
+      "location": "Juttaport",
+      "date": "2023-08-04 19:36",
+      "organizer": "Donte Lemke Esq."
+    },
+    {
+      "id": 158,
+      "title": "Blanditiis consectetur iste.",
+      "description": "Neque molestiae optio quo.",
+      "location": "Bernierberg",
+      "date": "2023-08-23 13:59",
+      "organizer": "Cleopatra Schmitt"
+    },
+    {
+      "id": 598,
+      "title": "Deserunt rerum.",
+      "description": "Odio doloribus facilis repellat.",
+      "location": "Lake Dongport",
+      "date": "2023-10-20 11:34",
+      "organizer": "Elmer Wolf"
+    },
+    {
+      "id": 307,
+      "title": "Suscipit aut ut.",
+      "description": "Consequatur minus culpa iste.",
+      "location": "Lake Mattbury",
+      "date": "2023-09-29 13:51",
+      "organizer": "Shelby Zboncak Esq."
+    },
+    {
+      "id": 810,
+      "title": "Repellendus quis.",
+      "description": "Delectus molestias qui tenetur.",
+      "location": "West Douglass",
+      "date": "2023-09-07 03:05",
+      "organizer": "Miss Aurelio Bauch"
+    },
+    {
+      "id": 480,
+      "title": "Vitae non.",
+      "description": "Facere dolorem animi beatae quia.",
+      "location": "Port Alejandro",
+      "date": "2023-11-04 01:31",
+      "organizer": "Melda McGlynn"
+    }
+  ]
+}

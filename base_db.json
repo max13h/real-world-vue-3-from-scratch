@@ -1,0 +1,84 @@
+{
+  "events": [
+    {
+      "id": 674,
+      "title": "Quia provident molestiae.",
+      "description": "Et aliquid repudiandae esse.",
+      "location": "Sanfordview",
+      "date": "2023-08-18 12:24",
+      "organizer": "Clement Weimann CPA"
+    },
+    {
+      "id": 501,
+      "title": "Dicta molestiae aut.",
+      "description": "Officiis voluptate voluptas rerum et.",
+      "location": "Lorashire",
+      "date": "2023-10-01 02:06",
+      "organizer": "Britany Becker"
+    },
+    {
+      "id": 23,
+      "title": "Id rerum.",
+      "description": "Ut rerum explicabo reiciendis ut.",
+      "location": "West Rudolph",
+      "date": "2023-10-04 22:28",
+      "organizer": "Rev. Ian Lindgren"
+    },
+    {
+      "id": 238,
+      "title": "Eum nam saepe.",
+      "description": "Et repellat suscipit doloremque.",
+      "location": "West Colby",
+      "date": "2023-08-22 18:34",
+      "organizer": "Miss Lawanna Ziemann"
+    },
+    {
+      "id": 136,
+      "title": "Omnis qui.",
+      "description": "Laudantium excepturi itaque provident.",
+      "location": "South Burton",
+      "date": "2023-10-18 16:05",
+      "organizer": "Dean Predovic"
+    },
+    {
+      "id": 785,
+      "title": "Omnis provident veniam.",
+      "description": "Sit reprehenderit dignissimos corporis et.",
+      "location": "Lake Natividadview",
+      "date": "2023-08-30 01:14",
+      "organizer": "Jennefer Reichert"
+    },
+    {
+      "id": 352,
+      "title": "Amet eos.",
+      "description": "Sed numquam facere eum nisi.",
+      "location": "Reillyton",
+      "date": "2023-10-20 10:12",
+      "organizer": "Anderson Armstrong"
+    },
+    {
+      "id": 116,
+      "title": "Saepe omnis officiis.",
+      "description": "Eum sed ut odit cumque.",
+      "location": "Dennyland",
+      "date": "2023-09-12 09:37",
+      "organizer": "Roderick Labadie"
+    },
+    {
+      "id": 519,
+      "title": "Dolor assumenda consequatur.",
+      "description": "Libero rerum aut doloremque non.",
+      "location": "Port Charlie",
+      "date": "2023-10-08 00:09",
+      "organizer": "Carli Harber"
+    },
+    {
+      "id": 83,
+      "title": "Labore dicta.",
+      "description": "Vitae quam sint quae voluptas.",
+      "location": "North Gonzalo",
+      "date": "2023-10-10 22:38",
+      "organizer": "Arron Ondricka"
+    }
+  ]
+}
