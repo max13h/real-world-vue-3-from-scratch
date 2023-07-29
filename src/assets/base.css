@@ -1,5 +1,6 @@
 :root {
-  --primary: #11bf57;
+  --primary: #00a726;
+  --secondary: rgba(242, 242, 242, 0.555);
 }
 
 * {
@@ -25,9 +26,4 @@ body {
     'Helvetica Neue',
     sans-serif;
   font-size: 16px;
-}
-
-a:hover {
-  transform: none;
-  color: var(--primary);
 }

@@ -1,11 +1,16 @@
 <template>
   <div>
-    <p>This is just a POC to show my skill in vuejs</p>
-    <a href="https://github.com/max13h">Link of my github</a>
+    <p>I showcase my Vue.js skills through this first Proof of Concept.</p>
+    <a href="https://github.com/max13h" class="dynamic-underline">Link to my github</a>
   </div>
 </template>
 
 <style scoped>
+div {
+  text-align: center;
+  margin-top: 4rem;
+}
+
 p,
 a {
   font-size: 2rem;
@@ -18,5 +23,10 @@ p {
 
 a {
   font-style: italic;
+  color: var(--primary);
+}
+
+a:hover {
+  filter: saturate(2);
 }
 </style>

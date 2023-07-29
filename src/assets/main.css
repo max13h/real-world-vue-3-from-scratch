@@ -1,1 +1,21 @@
 @import './base.css';
+
+.dynamic-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.dynamic-underline::before {
+  transition: 300ms;
+  height: 4px;
+  content: "";
+  position: absolute;
+  background-color: var(--primary);
+  width: 0%;
+  bottom: -2px;
+
+}
+
+.dynamic-underline:hover::before {
+  width: 100%;
+}

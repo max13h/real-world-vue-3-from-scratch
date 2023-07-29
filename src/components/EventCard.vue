@@ -1,12 +1,16 @@
 <template>
-  <div class="card" @click="$emit('displayEvent', event.id)">
-    <h2>{{ event.title }}</h2>
-    <p>@{{ event.date }}</p>
-    <p>{{ event.location }}</p>
-  </div>
+  <RouterLink :to="{ name: 'event-detail', params: { id: event.id } }">
+    <div class="card" @click="$emit('displayEvent', event.id)">
+      <h2>{{ event.title }}</h2>
+      <p>@{{ event.date }}</p>
+      <p>{{ event.location }}</p>
+    </div>
+  </RouterLink>
 </template>
 
 <script setup>
+import { RouterLink } from 'vue-router'
+
 defineProps({
   event: {
     type: Object,
@@ -21,7 +25,7 @@ defineProps({
   width: 24rem;
   height: 16rem;
   border: 2px solid black;
-  background-color: rgba(242, 242, 242, 0.555);
+  background-color: var(--secondary);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,9 +36,21 @@ defineProps({
   text-align: center;
 }
 
+@media (max-width: 24rem) {
+  .card {
+    width: 18rem;
+  }
+}
+
+@media (max-width: 18rem) {
+  .card {
+    width: 12rem;
+  }
+}
+
 .card:hover {
   transform: scale(1.01);
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 1px 1px var(--primary);
 }
 
 h2 {

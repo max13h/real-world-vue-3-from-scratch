@@ -1,5 +1,9 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView, useRoute } from 'vue-router'
+import { computed } from 'vue'
+
+const route = computed(() => useRoute().name)
+
 </script>
 
 <template>
@@ -8,8 +12,10 @@ import { RouterLink, RouterView } from 'vue-router'
     <header>
       <div>
         <nav>
-          <RouterLink class="router-link" to="/">Events</RouterLink> /
-          <RouterLink class="router-link" to="/about">About</RouterLink>
+          <RouterLink class="router-link" :class="route == 'events' ? '' : 'dynamic-underline'" :to="{ name: 'events' }">
+            Events</RouterLink> /
+          <RouterLink class="router-link" :class="route == 'about' ? '' : 'dynamic-underline'" :to="{ name: 'about' }">
+            About</RouterLink>
         </nav>
       </div>
     </header>
@@ -21,18 +27,23 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <style scoped>
 .container {
-  margin: 2rem 200px 0 200px;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.router-link {
-  font-size: x-large;
-}
-
 header {
   margin-bottom: 2rem;
+}
+
+.router-link-active {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.router-link {
+  font-size: 1.5rem;
 }
 </style>
