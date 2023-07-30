@@ -19,11 +19,11 @@ end
 array = []
 index = 0
 
-10.times do
+30.times do
   full_hour = set_hour
   object = {
     id: random[index],
-    title: Faker::Lorem.sentence(word_count: 2, random_words_to_add: 2),
+    title: Faker::Lorem.sentence(word_count: 3, random_words_to_add: 1),
     description: Faker::Lorem.sentence(word_count: 4, random_words_to_add: 2),
     location: Faker::Address.city,
     date: "#{Faker::Date.forward(days: 100)} #{full_hour}",
