@@ -9,9 +9,10 @@ def set_hour
   return "#{hour}:#{minute}"
 end
 
+number_of_events = 30
 random = []
 
-while random.size < 10
+while random.size < number_of_events
   num = rand(1000)
   random << num unless random.include?(num)
 end
@@ -19,7 +20,7 @@ end
 array = []
 index = 0
 
-30.times do
+number_of_events.times do
   full_hour = set_hour
   object = {
     id: random[index],
