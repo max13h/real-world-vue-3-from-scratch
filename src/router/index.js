@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import EventListView from '../views/EventListView.vue'
 const EventDetailView = () => import('../views/EventDetailView.vue')
-const AboutView = () => import(/* webpackChunkName: "about" */ '../views/EventDetailView.vue')
+const AboutView = () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
