@@ -25,8 +25,4 @@ a {
   font-style: italic;
   color: var(--primary);
 }
-
-a:hover {
-  filter: saturate(2);
-}
 </style>
