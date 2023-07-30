@@ -3,6 +3,7 @@ import EventCard from "../components/EventCard.vue";
 import { ref, onMounted, watchEffect, computed } from "vue";
 import { RouterLink } from 'vue-router'
 import EventService from "../services/EventService";
+import EventPagination from "../components/EventPagination.vue";
 
 const events = ref(null)
 const totalEvents = ref(0)
@@ -31,7 +32,6 @@ const hasNextPage = computed(() => {
   return (totalPage - props.page) > 0
 })
 
-const arrayOfPages = [1, 2, 3, 4, 5]
 </script>
 
 <template>
@@ -42,14 +42,7 @@ const arrayOfPages = [1, 2, 3, 4, 5]
       <RouterLink class="previous-link" :to="{ name: 'events', query: { page: page - 1 } }" rel="previous"
         v-if="page != 1">&#60; Previous</RouterLink>
     </div>
-
-    <div class="page-list">
-      <RouterLink class="page-list" :class="page == pageNb ? 'isActive' : 'notActive'"
-        v-for="(pageNb, index) in arrayOfPages" :key="index" :to="{ name: 'events', query: { page: pageNb } }"
-        :rel="'page number' + pageNb">{{ pageNb }}
-      </RouterLink>
-    </div>
-
+    <EventPagination :page="page" :totalEvents="parseInt(totalEvents)"></EventPagination>
     <div class="simple-nav">
       <RouterLink class="next-link" :to="{ name: 'events', query: { page: page + 1 } }" rel="next" v-if="hasNextPage">
         <span>Next &#62;</span>
@@ -88,26 +81,6 @@ const arrayOfPages = [1, 2, 3, 4, 5]
 
 .next-link span:hover {
   transform: scale(1.1);
-}
-
-
-.isActive {
-  color: var(--primary);
-  font-weight: bold;
-  position: relative;
-  width: 10px;
-}
-
-.isActive:before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  border: 2px solid black;
-  box-shadow: 2px 2px 1px 1px var(--primary);
-  top: -5px;
 }
 
 .previous-link:hover,
