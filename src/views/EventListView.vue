@@ -83,8 +83,7 @@ const hasNextPage = computed(() => {
   transform: scale(1.1);
 }
 
-.previous-link:hover,
-.notActive:hover {
+.previous-link:hover {
   transform: scale(1.1);
 }
 </style>
