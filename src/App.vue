@@ -12,10 +12,16 @@ const route = computed(() => useRoute().name)
     <header>
       <div>
         <nav>
-          <RouterLink class="router-link" :class="route == 'events' ? '' : 'dynamic-underline'" :to="{ name: 'events' }">
-            Events</RouterLink> /
-          <RouterLink class="router-link" :class="route == 'about' ? '' : 'dynamic-underline'" :to="{ name: 'about' }">
-            About</RouterLink>
+          <div>
+            <RouterLink class="router-link" :class="route == 'events' ? '' : 'dynamic-underline'"
+              :to="{ name: 'events' }">
+              Events</RouterLink>
+          </div>
+          <span>/</span>
+          <div>
+            <RouterLink class="router-link" :class="route == 'about' ? '' : 'dynamic-underline'" :to="{ name: 'about' }">
+              About</RouterLink>
+          </div>
         </nav>
       </div>
     </header>
@@ -45,5 +51,17 @@ header {
 
 .router-link {
   font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+}
+
+nav * {
+  flex-grow: 1;
+  text-align: center;
 }
 </style>

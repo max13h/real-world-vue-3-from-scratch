@@ -1,9 +1,12 @@
 <template>
   <div class="event-menu">
-    <RouterLink :to="{ name: 'event-details' }">Details
-    </RouterLink> /
-    <RouterLink :to="{ name: 'event-register' }">Register</RouterLink> /
-    <RouterLink :to="{ name: 'event-edit' }">Edit</RouterLink>
+    <RouterLink :to="{ name: 'event-details' }" :class="$route.name != 'event-details' ? 'isNotActive' : ''">Details
+    </RouterLink>
+    <span>/</span>
+    <RouterLink :to="{ name: 'event-register' }" :class="$route.name != 'event-register' ? 'isNotActive' : ''">Register
+    </RouterLink>
+    <span>/</span>
+    <RouterLink :to="{ name: 'event-edit' }" :class="$route.name != 'event-edit' ? 'isNotActive' : ''">Edit</RouterLink>
   </div>
 
   <RouterView :event="event"></RouterView>
@@ -41,10 +44,22 @@ onMounted(() => {
 
 .event-menu {
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 200px;
+  width: 100%;
 }
 
-.isNotActive {
-  background-color: red;
+.event-menu * {
+  flex-grow: 1;
+  text-align: center;
+}
+
+
+.isNotActive:hover {
+  display: inline-block;
+  transform: scale(1.1);
 }
 </style>
