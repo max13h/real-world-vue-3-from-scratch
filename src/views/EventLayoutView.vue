@@ -9,7 +9,7 @@
     <RouterLink :to="{ name: 'event-edit' }" :class="$route.name != 'event-edit' ? 'isNotActive' : ''">Edit</RouterLink>
   </div>
 
-  <RouterView :event="event"></RouterView>
+  <RouterView :event="event" class="router-view"></RouterView>
 </template>
 
 <script setup>
@@ -61,5 +61,12 @@ onMounted(() => {
 .isNotActive:hover {
   display: inline-block;
   transform: scale(1.1);
+}
+
+.router-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 </style>
