@@ -1,7 +1,6 @@
 <script setup>
 import EventCard from "../components/EventCard.vue";
 import { ref, onMounted, watchEffect, computed } from "vue";
-import { RouterLink } from 'vue-router'
 import EventService from "../services/EventService";
 import EventPagination from "../components/EventPagination.vue";
 
@@ -37,53 +36,8 @@ const hasNextPage = computed(() => {
 <template>
   <EventCard v-for="event in events" :key="event.id" :event="event"></EventCard>
 
-  <div class="pagination">
-    <div class="simple-nav">
-      <RouterLink class="previous-link" :to="{ name: 'events', query: { page: page - 1 } }" rel="previous"
-        v-if="page != 1">&#60; Previous</RouterLink>
-    </div>
-    <EventPagination :page="page" :totalEvents="parseInt(totalEvents)"></EventPagination>
-    <div class="simple-nav">
-      <RouterLink class="next-link" :to="{ name: 'events', query: { page: page + 1 } }" rel="next" v-if="hasNextPage">
-        <span>Next &#62;</span>
-
-      </RouterLink>
-    </div>
-  </div>
+  <EventPagination :hasNextPage="hasNextPage" :page="page" :totalEvents="totalEvents"></EventPagination>
 </template>
 
 <style scoped>
-.pagination {
-  width: 100%;
-  max-width: 500px;
-  display: flex;
-}
-
-.pagination .simple-nav {
-  flex: 1;
-  display: flex;
-}
-
-.page-list {
-  flex: 2;
-  display: flex;
-  justify-content: center;
-}
-
-.next-link {
-  width: 100%;
-  text-align: right;
-}
-
-.next-link span {
-  display: inline-block;
-}
-
-.next-link span:hover {
-  transform: scale(1.1);
-}
-
-.previous-link:hover {
-  transform: scale(1.1);
-}
 </style>
