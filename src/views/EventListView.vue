@@ -36,8 +36,5 @@ const hasNextPage = computed(() => {
 <template>
   <EventCard v-for="event in events" :key="event.id" :event="event"></EventCard>
 
-  <EventPagination :hasNextPage="hasNextPage" :page="page" :totalEvents="totalEvents"></EventPagination>
+  <EventPagination :hasNextPage="hasNextPage" :page="page" :totalEvents="parseInt(totalEvents)"></EventPagination>
 </template>
-
-<style scoped>
-</style>
