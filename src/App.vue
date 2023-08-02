@@ -1,8 +1,9 @@
 <script setup>
 import { RouterLink, RouterView, useRoute } from 'vue-router'
-import { computed } from 'vue'
+import { computed, inject } from 'vue'
 
 const route = computed(() => useRoute().name)
+const GStore = inject('GStore')
 
 </script>
 
@@ -10,6 +11,9 @@ const route = computed(() => useRoute().name)
   <div class="container">
 
     <header>
+      <div class="flashMessage" :class="GStore.status" v-if="GStore.flashMessage">
+        <p>{{ GStore.flashMessage }}</p>
+      </div>
       <div>
         <nav>
           <div>
@@ -63,5 +67,40 @@ nav {
 nav * {
   flex-grow: 1;
   text-align: center;
+}
+
+.flashMessage {
+  position: absolute;
+  background-color: (var(--primary));
+  top: 5%;
+  right: 2%;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 1px rgb(232, 232, 232);
+  animation-name: flashMessage;
+  animation-duration: 5s;
+}
+
+.flashMessage.success {
+  background-color: rgb(124, 255, 112);
+}
+
+.flashMessage.error {
+  background-color: rgb(255, 112, 112);
+}
+
+@keyframes flashMessage {
+  from {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0.85
+  }
+
+  to {
+    opacity: 0;
+
+  }
 }
 </style>

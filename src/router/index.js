@@ -6,6 +6,7 @@ const EventDetails = () => import(/* webpackChunkName: "event" */ '../views/even
 const EventRegister = () => import(/* webpackChunkName: "event" */ '../views/event/RegisterView.vue')
 const EventEdit = () => import(/* webpackChunkName: "event" */ '../views/event/EditView.vue')
 const NotFound = () => import(/* webpackChunkName: "not-found" */ '../views/NotFound.vue')
+const NetworkError = () => import(/* webpackChunkName: "network-error" */ '../views/NetworkError.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -46,14 +47,19 @@ const router = createRouter({
     },
     {
       path: '/:catchAll(.*)',
-      name: 'NotFound',
+      name: 'not-found',
       component: NotFound,
     },
     {
       path: '/404/:resource',
-      name: '404Resource',
+      name: '404-resource',
       component: NotFound,
       props: true
+    },
+    {
+      path: '/network-error',
+      name: 'network-error',
+      component: NetworkError,
     }
   ]
 })

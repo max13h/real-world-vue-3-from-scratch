@@ -3,7 +3,9 @@ import EventCard from "../components/EventCard.vue";
 import { ref, onMounted, watchEffect, computed } from "vue";
 import EventService from "../services/EventService";
 import EventPagination from "../components/EventPagination.vue";
+import { useRouter } from 'vue-router';
 
+const router = useRouter()
 const events = ref(null)
 const totalEvents = ref(0)
 
@@ -21,7 +23,12 @@ onMounted(() => {
         totalEvents.value = response.headers['x-total-count']
       })
       .catch((error) => {
-        console.log(error)
+        if (error.response && error.response.status == 404) {
+          console.log(error)
+          router.push({ name: '404-resource', params: { resource: 'event' } })
+        } else {
+          router.push({ name: 'network-error' })
+        }
       })
   })
 })

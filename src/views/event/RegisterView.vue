@@ -8,10 +8,14 @@
 
 <script setup>
 import { useRouter } from "vue-router";
+import { inject } from "vue";
+import { useSetFlashMessage } from "../../utils/useSetFlashMessage";
 
 const router = useRouter()
+const GStore = inject('GStore')
 
 const register = () => {
+  useSetFlashMessage(GStore, 'success', 'Successfully registered for the event!')
   router.push({ name: 'event-details' })
 }
 </script>
