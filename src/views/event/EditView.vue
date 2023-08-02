@@ -2,7 +2,7 @@
   <div>
     <h3>Click to edit this event</h3>
     <br>
-    <button type="button" class="btn-primary" data-btn="Edit event" @click="register">Edit event</button>
+    <button type="button" class="btn-secondary" data-btn="Edit event" @click="register">Edit event</button>
   </div>
 </template>
 

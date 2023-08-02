@@ -5,6 +5,7 @@ const EventLayout = () => import(/* webpackChunkName: "event" */ '../views/Event
 const EventDetails = () => import(/* webpackChunkName: "event" */ '../views/event/DetailsView.vue')
 const EventRegister = () => import(/* webpackChunkName: "event" */ '../views/event/RegisterView.vue')
 const EventEdit = () => import(/* webpackChunkName: "event" */ '../views/event/EditView.vue')
+const NotFound = () => import(/* webpackChunkName: "not-found" */ '../views/NotFound.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -42,6 +43,17 @@ const router = createRouter({
           component: EventEdit
         }
       ]
+    },
+    {
+      path: '/:catchAll(.*)',
+      name: 'NotFound',
+      component: NotFound,
+    },
+    {
+      path: '/404/:resource',
+      name: '404Resource',
+      component: NotFound,
+      props: true
     }
   ]
 })

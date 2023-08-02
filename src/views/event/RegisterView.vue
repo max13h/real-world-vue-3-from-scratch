@@ -2,7 +2,7 @@
   <div>
     <h3>Click to register to this event</h3>
     <br>
-    <button type="button" class="btn-primary" data-btn="Register Me" @click="register">Register Me</button>
+    <button type="button" class="btn-secondary" data-btn="Register Me" @click="register">Register Me</button>
   </div>
 </template>
 
