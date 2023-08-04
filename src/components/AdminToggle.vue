@@ -1,14 +1,13 @@
 <template>
-  <i class="admin-toggle " :class="isOn ? 'ri-toggle-fill' : 'ri-toggle-line'" @click="adminToggle()"></i>
+  <i class="admin-toggle " :class="adminStore.hasAuth ? 'ri-toggle-fill' : 'ri-toggle-line'" @click="adminToggle()"></i>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { useAdminStore } from "../store/admin";
 
-const isOn = ref(false)
-
+const adminStore = useAdminStore()
 const adminToggle = () => {
-  isOn.value = !isOn.value
+  adminStore.hasAuth = !adminStore.hasAuth
 }
 </script>
 

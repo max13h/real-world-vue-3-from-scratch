@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink, RouterView, useRoute } from 'vue-router'
 import { computed, inject } from 'vue'
+import { useAdminStore } from "./store/admin";
 
 import AdminToggle from "./components/AdminToggle.vue";
 
@@ -8,7 +9,7 @@ import './assets/components/flash-message.css'
 
 const route = computed(() => useRoute().name)
 const GStore = inject('GStore')
-
+const adminStore = useAdminStore()
 </script>
 
 <template>
@@ -32,7 +33,7 @@ const GStore = inject('GStore')
           </div>
         </nav>
         <AdminToggle />
-        <div class="admin-pannel">
+        <div v-if="adminStore.hasAuth" class="admin-pannel">
           SALUT LES LOUOLOUS
         </div>
       </div>
@@ -78,7 +79,6 @@ nav * {
 }
 
 .full-menu {
-  background-color: greenyellow;
   display: flex;
   flex-direction: column;
   justify-content: center;

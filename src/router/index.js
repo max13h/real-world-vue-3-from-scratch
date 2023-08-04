@@ -9,7 +9,7 @@ const EventEdit = () => import(/* webpackChunkName: "event" */ '../views/event/E
 const NotFound = () => import(/* webpackChunkName: "not-found" */ '../views/NotFound.vue')
 const NetworkError = () => import(/* webpackChunkName: "network-error" */ '../views/NetworkError.vue')
 import EventService from "@/services/EventService"
-import GStore from '@/store'
+import GStore from '@/store/index'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
