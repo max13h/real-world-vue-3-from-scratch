@@ -5,7 +5,7 @@
         v-if="page != 1">&#60; Previous</RouterLink>
     </div>
 
-    <EventBarPages :page="page" :totalEvents="totalEvents"></EventBarPages>
+    <EventBarPages :page="page" :totalEvents="totalEvents" class="event-bar-pages"></EventBarPages>
 
     <div class="simple-nav">
       <RouterLink class="next-link" :to="{ name: 'events', query: { page: page + 1 } }" rel="next" v-if="hasNextPage">
@@ -56,6 +56,7 @@ defineProps({
 .next-link {
   width: 100%;
   text-align: right;
+  margin-right: 1rem;
 }
 
 .next-link span {
@@ -66,7 +67,17 @@ defineProps({
   transform: scale(1.1);
 }
 
+.previous-link {
+  margin-left: 1rem;
+}
+
 .previous-link:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 385px) {
+  .event-bar-pages {
+    display: none;
+  }
 }
 </style>
