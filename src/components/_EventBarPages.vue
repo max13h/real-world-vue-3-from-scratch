@@ -21,7 +21,9 @@ const props = defineProps({
   },
 })
 
-const totalOfPage = computed(() => Math.ceil(props.totalEvents / 2))
+const nbOfEventPerPage = 4
+
+const totalOfPage = computed(() => Math.ceil(props.totalEvents / nbOfEventPerPage))
 let arrayOfPages = ref([])
 
 const toWhichPage = (pageNb, index) => {

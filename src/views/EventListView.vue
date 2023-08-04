@@ -18,7 +18,7 @@ export default {
   },
   beforeRouteEnter(to, from, next) {
     NProgress.start()
-    EventService.getEvents(2, to.query.page || 1)
+    EventService.getEvents(4, to.query.page || 1)
       .then((response) => {
         next(comp => {
           comp.events = response.data
@@ -39,7 +39,7 @@ export default {
   },
   beforeRouteUpdate(to) {
     NProgress.start()
-    return EventService.getEvents(2, to.query.page || 1)
+    return EventService.getEvents(4, to.query.page || 1)
       .then((response) => {
         this.events = response.data
         this.totalEvents = response.headers['x-total-count']
@@ -58,7 +58,7 @@ export default {
   },
   methods: {
     getEvents() {
-      EventService.getEvents(2, this.page)
+      EventService.getEvents(4, this.page)
         .then((response) => {
           this.events = response.data
           this.totalEvents = response.headers['x-total-count']
@@ -80,7 +80,7 @@ export default {
   },
   computed: {
     hasNextPage() {
-      const totalPage = this.totalEvents / 2
+      const totalPage = this.totalEvents / 4
       return (totalPage - this.page) > 0
     }
   },
@@ -96,5 +96,12 @@ export default {
 <template>
   <EventCard v-for="event in events" :key="event.id" :event="event"></EventCard>
 
-  <EventPagination :hasNextPage="hasNextPage" :page="page" :totalEvents="parseInt(totalEvents)"></EventPagination>
+  <EventPagination :hasNextPage="hasNextPage" :page="page" :totalEvents="parseInt(totalEvents)" class="event-pagination">
+  </EventPagination>
 </template>
+
+<style scoped>
+.event-pagination {
+  margin-bottom: 3rem;
+}
+</style>
