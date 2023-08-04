@@ -9,37 +9,13 @@
     <RouterLink :to="{ name: 'event-edit' }" :class="$route.name != 'event-edit' ? 'isNotActive' : ''">Edit</RouterLink>
   </div>
 
-  <RouterView :event="event" class="router-view"></RouterView>
+  <RouterView :event="GStore.event" class="router-view"></RouterView>
 </template>
 
-<script setup>
-import { ref, onMounted } from 'vue'
-import { RouterLink, RouterView, useRouter } from 'vue-router';
-import EventService from "../services/EventService";
-
-const props = defineProps({
-  id: {
-    require: true,
-  }
-})
-
-const event = ref(null)
-const router = useRouter()
-
-onMounted(() => {
-  EventService.getEvent(props.id)
-    .then((response) => {
-      event.value = response.data
-    })
-    .catch((error) => {
-      if (error.response && error.response.status == 404) {
-        console.log(error)
-        router.push({ name: '404-resource', params: { resource: 'event' } })
-      } else {
-        router.push({ name: 'network-error' })
-      }
-    })
-})
+<script>
+export default {
+  inject: ['GStore']
+}
 </script>
 
 <style scoped>

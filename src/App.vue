@@ -11,7 +11,7 @@ const GStore = inject('GStore')
   <div class="container">
 
     <header>
-      <div class="flashMessage" :class="GStore.status" v-if="GStore.flashMessage">
+      <div class="flashMessage" :class="GStore.statusMessage" v-if="GStore.flashMessage">
         <p>{{ GStore.flashMessage }}</p>
       </div>
       <div>

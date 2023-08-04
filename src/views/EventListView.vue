@@ -1,42 +1,95 @@
-<script setup>
+<script>
 import EventCard from "../components/EventCard.vue";
-import { ref, onMounted, watchEffect, computed } from "vue";
 import EventService from "../services/EventService";
 import EventPagination from "../components/EventPagination.vue";
-import { useRouter } from 'vue-router';
+import NProgress from 'nprogress'
 
-const router = useRouter()
-const events = ref(null)
-const totalEvents = ref(0)
-
-const props = defineProps({
-  page: {
-    require: true
-  }
-})
-
-onMounted(() => {
-  watchEffect(() => {
-    EventService.getEvents(2, props.page)
+export default {
+  data() {
+    return {
+      events: null,
+      totalEvents: 0
+    }
+  },
+  props: {
+    page: {
+      require: true
+    }
+  },
+  beforeRouteEnter(to, from, next) {
+    NProgress.start()
+    EventService.getEvents(2, to.query.page || 1)
       .then((response) => {
-        events.value = response.data
-        totalEvents.value = response.headers['x-total-count']
+        next(comp => {
+          comp.events = response.data
+          comp.totalEvents = response.headers['x-total-count']
+        })
       })
       .catch((error) => {
         if (error.response && error.response.status == 404) {
           console.log(error)
-          router.push({ name: '404-resource', params: { resource: 'event' } })
+          next({ name: '404-resource', params: { resource: 'event' } })
         } else {
-          router.push({ name: 'network-error' })
+          next({ name: 'network-error' })
         }
       })
-  })
-})
+      .finally(() => {
+        NProgress.done()
+      })
+  },
+  beforeRouteUpdate(to) {
+    NProgress.start()
+    return EventService.getEvents(2, to.query.page || 1)
+      .then((response) => {
+        this.events = response.data
+        this.totalEvents = response.headers['x-total-count']
+      })
+      .catch((error) => {
+        if (error.response && error.response.status == 404) {
+          console.log(error)
+          return { name: '404-resource', params: { resource: 'event' } }
+        } else {
+          return { name: 'network-error' }
+        }
+      })
+      .finally(() => {
+        NProgress.done()
+      })
+  },
+  methods: {
+    getEvents() {
+      EventService.getEvents(2, this.page)
+        .then((response) => {
+          this.events = response.data
+          this.totalEvents = response.headers['x-total-count']
+        })
+        .catch((error) => {
+          if (error.response && error.response.status == 404) {
+            console.log(error)
+            this.$router.push({ name: '404-resource', params: { resource: 'event' } })
+          } else {
+            this.$router.push({ name: 'network-error' })
+          }
+        })
+    }
+  },
+  watch: {
+    page() {
+      this.getEvents()
+    }
+  },
+  computed: {
+    hasNextPage() {
+      const totalPage = this.totalEvents / 2
+      return (totalPage - this.page) > 0
+    }
+  },
+  components: {
+    EventCard,
+    EventPagination
+  }
+}
 
-const hasNextPage = computed(() => {
-  const totalPage = totalEvents.value / 2
-  return (totalPage - props.page) > 0
-})
 
 </script>
 

@@ -1,6 +1,6 @@
 export function useSetFlashMessage(GStore, status, message) {
   GStore.flashMessage = message
-  GStore.status = status
+  GStore.statusMessage = status
   setTimeout(() => {
     GStore.flashMessage = ''
     GStore.status = ''
