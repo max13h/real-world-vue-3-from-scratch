@@ -16,7 +16,6 @@ const GStore = inject('GStore')
 
 const register = () => {
   useSetFlashMessage(GStore, 'error', "You don't have the permission to modify the event")
-  console.log(GStore);
   router.push({ name: 'event-details' })
 }
 </script>

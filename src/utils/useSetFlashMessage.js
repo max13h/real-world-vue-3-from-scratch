@@ -1,8 +1,11 @@
+import { useAdminStore } from "../store/admin";
+
 export function useSetFlashMessage(GStore, status, message) {
-  GStore.flashMessage = message
-  GStore.statusMessage = status
+  const adminStore = useAdminStore()
+  adminStore.flashMessage = message
+  adminStore.statusMessage = status
   setTimeout(() => {
-    GStore.flashMessage = ''
-    GStore.status = ''
+    adminStore.flashMessage = ''
+    adminStore.status = ''
   }, 5000);
 }

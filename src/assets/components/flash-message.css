@@ -1,14 +1,17 @@
 .flashMessage {
-  position: absolute;
   background-color: (var(--primary));
-  top: 5%;
-  right: 2%;
+  position: absolute;
+  bottom: 3rem;
+  right: 50%;
+  transform: translateX(50%);
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 5px 5px 10px 1px rgb(232, 232, 232);
   animation-name: flashMessage;
   animation-duration: 5s;
+  text-align: center;
 }
+
 
 .flashMessage.success {
   background-color: rgb(124, 255, 112);

@@ -12,10 +12,19 @@
   <RouterView :event="GStore.event" class="router-view"></RouterView>
 </template>
 
-<script>
-export default {
-  inject: ['GStore']
-}
+<script setup>
+import { useAdminStore } from "../store/admin";
+import { useEventStore } from "../store/event";
+import { onBeforeRouteLeave } from "vue-router";
+import GStore from "../store/index";
+
+const adminStore = useAdminStore()
+const EventStore = useEventStore()
+
+onBeforeRouteLeave(() => {
+  adminStore.flashMessage = ''
+  adminStore.statusMessage = ''
+})
 </script>
 
 <style scoped>

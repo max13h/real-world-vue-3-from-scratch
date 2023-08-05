@@ -10,7 +10,9 @@ const NotFound = () => import(/* webpackChunkName: "not-found" */ '../views/NotF
 const NetworkError = () => import(/* webpackChunkName: "network-error" */ '../views/NetworkError.vue')
 import EventService from "@/services/EventService"
 import GStore from '@/store/index'
+import { useEventStore } from "../store/event";
 
+const eventStore = useEventStore()
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -33,7 +35,6 @@ const router = createRouter({
       beforeEnter: to => {
         return EventService.getEvent(to.params.id)
           .then((response) => {
-            console.log(to);
             GStore.event = response.data
           })
           .catch((error) => {

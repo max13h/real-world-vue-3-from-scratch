@@ -1,7 +1,7 @@
 import { reactive } from "vue";
 
 export default reactive({
-  flashMessage: '',
-  statusMessage: '',
+  flashMessage: 'hello',
+  statusMessage: 'error',
   event: null,
 })

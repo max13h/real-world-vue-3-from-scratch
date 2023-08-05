@@ -1,14 +1,12 @@
 <script setup>
 import { RouterLink, RouterView, useRoute } from 'vue-router'
-import { computed, inject } from 'vue'
 import { useAdminStore } from "./store/admin";
 
 import AdminToggle from "./components/AdminToggle.vue";
 
 import './assets/components/flash-message.css'
 
-const route = computed(() => useRoute().name)
-const GStore = inject('GStore')
+const route = useRoute().name
 const adminStore = useAdminStore()
 </script>
 
@@ -16,8 +14,8 @@ const adminStore = useAdminStore()
   <div class="container">
 
     <header>
-      <div class="flashMessage" :class="GStore.statusMessage" v-if="GStore.flashMessage">
-        <p>{{ GStore.flashMessage }}</p>
+      <div class="flashMessage" :class="adminStore.statusMessage" v-if="adminStore.flashMessage">
+        <p>{{ adminStore.flashMessage }}</p>
       </div>
       <div class="full-menu">
         <nav>
@@ -32,7 +30,7 @@ const adminStore = useAdminStore()
               About</RouterLink>
           </div>
         </nav>
-        <AdminToggle />
+        <AdminToggle title="Get admin access" />
         <div v-if="adminStore.hasAuth" class="admin-pannel">
           SALUT LES LOUOLOUS
         </div>
