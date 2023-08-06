@@ -9,18 +9,18 @@
     <RouterLink :to="{ name: 'event-edit' }" :class="$route.name != 'event-edit' ? 'isNotActive' : ''">Edit</RouterLink>
   </div>
 
-  <RouterView :event="eventStore.event" class="router-view"></RouterView>
+  <RouterView :event="eventsStore.event" class="router-view"></RouterView>
 </template>
 
 <script setup>
 import { useFlashMessageStore } from "../store/flashMessage";
-import { useEventStore } from "../store/event";
+import { useEventsStore } from "../store/events";
 import { onBeforeRouteLeave } from "vue-router";
 import { defineProps } from "vue";
 
 
 const flashMessageStore = useFlashMessageStore()
-const eventStore = useEventStore()
+const eventsStore = useEventsStore()
 defineProps(['id'])
 
 onBeforeRouteLeave(() => {

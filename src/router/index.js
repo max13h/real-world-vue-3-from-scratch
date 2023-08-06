@@ -6,11 +6,11 @@ const EventLayout = () => import(/* webpackChunkName: "event" */ '../views/Event
 const EventDetails = () => import(/* webpackChunkName: "event" */ '../views/event/DetailsView.vue')
 const EventRegister = () => import(/* webpackChunkName: "event" */ '../views/event/RegisterView.vue')
 const EventEdit = () => import(/* webpackChunkName: "event" */ '../views/event/EditView.vue')
-const EventCreate = () => import(/* webpackChunkName: "event-create" */ '../views/EventCreate.vue')
+const EventCreate = () => import(/* webpackChunkName: "event-create" */ '../views/EventCreateView.vue')
 const NotFound = () => import(/* webpackChunkName: "not-found" */ '../views/NotFound.vue')
 const NetworkError = () => import(/* webpackChunkName: "network-error" */ '../views/NetworkError.vue')
 import EventService from "@/services/EventService"
-import { useEventStore } from "../store/event";
+import { useEventsStore } from "../store/events";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,10 +32,10 @@ const router = createRouter({
       props: true,
       component: EventLayout,
       beforeEnter: to => {
-        const eventStore = useEventStore()
+        const eventsStore = useEventsStore()
         return EventService.getEvent(to.params.id)
           .then((response) => {
-            eventStore.event = response.data
+            eventsStore.event = response.data
           })
           .catch((error) => {
             if (error.response && error.response.status == 404) {
@@ -65,7 +65,7 @@ const router = createRouter({
       ]
     },
     {
-      path: '/create',
+      path: '/event/create',
       name: 'create',
       component: EventCreate
     },

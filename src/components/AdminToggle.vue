@@ -1,14 +1,20 @@
 <template>
-  <i class="admin-toggle " :class="adminStore.hasAuth ? 'ri-toggle-fill' : 'ri-toggle-line'" @click="adminToggle()"></i>
+  <i class="admin-toggle " :class="props.hasAuth ? 'ri-toggle-fill' : 'ri-toggle-line'" @click="adminToggle()"></i>
 </template>
 
 <script setup>
-import { useAdminStore } from "../store/admin";
+import { ref } from 'vue';
 
-const adminStore = useAdminStore()
+const props = defineProps(['hasAuth'])
+const emit = defineEmits(['editHasAuth'])
+
+const hasAuth = ref(props.hasAuth)
+
 const adminToggle = () => {
-  adminStore.hasAuth = !adminStore.hasAuth
+  hasAuth.value = !hasAuth.value
+  emit('editHasAuth', hasAuth.value)
 }
+
 </script>
 
 <style scoped>

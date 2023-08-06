@@ -11,6 +11,11 @@ import './assets/components/flash-message.css'
 const adminStore = useAdminStore()
 const flashMessageStore = useFlashMessageStore()
 const route = useRoute().name
+
+const editHasAuth = (response) => {
+  adminStore.hasAuth = response
+  console.log(response);
+}
 </script>
 
 <template>
@@ -33,7 +38,8 @@ const route = useRoute().name
               About</RouterLink>
           </div>
         </nav>
-        <AdminToggle title="Get admin access" />
+        <AdminToggle title="Get admin access" :has-auth="adminStore.hasAuth" @edit-has-auth="editHasAuth"
+          v-if="$route.name == 'events'" />
         <div v-if="adminStore.hasAuth && $route.name == 'events'" class="admin-pannel">
           <AdminPannel></AdminPannel>
         </div>
