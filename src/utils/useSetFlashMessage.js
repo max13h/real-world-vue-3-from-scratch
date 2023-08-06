@@ -7,8 +7,7 @@ export function useSetFlashMessage(status, message) {
   flashMessageStore.statusMessage = status
 
   setTimeout(() => {
-    flashMessageStore.flashMessage = ''
-    flashMessageStore.status = ''
+    flashMessageStore.flashMessage = null
+    flashMessageStore.status = null
   }, 3500);
-
 }

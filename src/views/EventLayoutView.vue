@@ -13,19 +13,19 @@
 </template>
 
 <script setup>
-import { useAdminStore } from "../store/admin";
+import { useFlashMessageStore } from "../store/flashMessage";
 import { useEventStore } from "../store/event";
 import { onBeforeRouteLeave } from "vue-router";
 import { defineProps } from "vue";
 
 
-const adminStore = useAdminStore()
+const flashMessageStore = useFlashMessageStore()
 const eventStore = useEventStore()
 defineProps(['id'])
 
 onBeforeRouteLeave(() => {
-  adminStore.flashMessage = ''
-  adminStore.statusMessage = ''
+  flashMessageStore.flashMessage = ''
+  flashMessageStore.statusMessage = ''
 })
 </script>
 
