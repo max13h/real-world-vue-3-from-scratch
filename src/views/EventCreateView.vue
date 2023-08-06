@@ -20,7 +20,10 @@
 </template>
 
 <script setup>
-import { ref, watchEffect } from 'vue';
+import { ref } from 'vue';
+import { useEventsStore } from "../store/events";
+
+const eventsStore = useEventsStore()
 
 const title = ref(null)
 const description = ref(null)
@@ -28,9 +31,22 @@ const location = ref(null)
 const date = ref(null)
 const organizer = ref(null)
 
-watchEffect(() => {
-  console.log(title.value);
-})
+
+const onSubmit = () => {
+  eventsStore.personalEventsID++
+
+  const newEvent = {
+    id: eventsStore.personalEventsID,
+    title: title.value,
+    description: description.value,
+    location: location.value,
+    date: date.value,
+    organizer: organizer.value,
+  }
+
+  eventsStore.personalEvents.push(newEvent)
+  console.log(eventsStore.personalEvents);
+}
 </script>
 
 <style scoped>

@@ -14,7 +14,6 @@ const route = useRoute().name
 
 const editHasAuth = (response) => {
   adminStore.hasAuth = response
-  console.log(response);
 }
 </script>
 

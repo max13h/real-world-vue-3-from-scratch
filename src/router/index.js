@@ -1,6 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
 import EventList from '../views/EventListView.vue'
-import NProgress from "nprogress";
 const About = () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
 const EventLayout = () => import(/* webpackChunkName: "event" */ '../views/EventLayoutView.vue')
 const EventDetails = () => import(/* webpackChunkName: "event" */ '../views/event/DetailsView.vue')
@@ -9,8 +7,12 @@ const EventEdit = () => import(/* webpackChunkName: "event" */ '../views/event/E
 const EventCreate = () => import(/* webpackChunkName: "event-create" */ '../views/EventCreateView.vue')
 const NotFound = () => import(/* webpackChunkName: "not-found" */ '../views/NotFound.vue')
 const NetworkError = () => import(/* webpackChunkName: "network-error" */ '../views/NetworkError.vue')
+
+import { createRouter, createWebHistory } from 'vue-router'
+import NProgress from "nprogress";
 import EventService from "@/services/EventService"
 import { useEventsStore } from "../store/events";
+import { useAdminStore } from "../store/admin";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -67,7 +69,8 @@ const router = createRouter({
     {
       path: '/event/create',
       name: 'create',
-      component: EventCreate
+      component: EventCreate,
+      meta: { requiresAuth: true }
     },
     {
       path: '/:catchAll(.*)',
@@ -95,9 +98,20 @@ const router = createRouter({
   }
 })
 
-router.beforeEach(() => {
+
+router.beforeEach(async (to) => {
   NProgress.start()
+
+  const adminStore = useAdminStore()
+  if (to.meta.requiresAuth && !adminStore.hasAuth) {
+    router.push({ name: 'events' })
+    const { useSetFlashMessage } = await import('../utils/useSetFlashMessage')
+    useSetFlashMessage('error', "Access denied, this path requier authorization")
+
+  }
 })
+
+
 router.afterEach(() => {
   NProgress.done()
 })
