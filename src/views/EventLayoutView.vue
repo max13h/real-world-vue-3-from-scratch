@@ -9,17 +9,16 @@
     <RouterLink :to="{ name: 'event-edit' }" :class="$route.name != 'event-edit' ? 'isNotActive' : ''">Edit</RouterLink>
   </div>
 
-  <RouterView :event="GStore.event" class="router-view"></RouterView>
+  <RouterView :event="eventStore.event" class="router-view"></RouterView>
 </template>
 
 <script setup>
 import { useAdminStore } from "../store/admin";
 import { useEventStore } from "../store/event";
 import { onBeforeRouteLeave } from "vue-router";
-import GStore from "../store/index";
 
 const adminStore = useAdminStore()
-const EventStore = useEventStore()
+const eventStore = useEventStore()
 
 onBeforeRouteLeave(() => {
   adminStore.flashMessage = ''
