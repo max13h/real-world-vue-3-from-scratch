@@ -16,9 +16,12 @@
 import { useAdminStore } from "../store/admin";
 import { useEventStore } from "../store/event";
 import { onBeforeRouteLeave } from "vue-router";
+import { defineProps } from "vue";
+
 
 const adminStore = useAdminStore()
 const eventStore = useEventStore()
+defineProps(['id'])
 
 onBeforeRouteLeave(() => {
   adminStore.flashMessage = ''

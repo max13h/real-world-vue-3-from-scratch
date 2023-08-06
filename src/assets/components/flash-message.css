@@ -8,7 +8,7 @@
   border-radius: 10px;
   box-shadow: 5px 5px 10px 1px rgb(232, 232, 232);
   animation-name: flashMessage;
-  animation-duration: 5s;
+  animation-duration: 3500ms;
   text-align: center;
 }
 

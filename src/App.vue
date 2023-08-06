@@ -1,21 +1,24 @@
 <script setup>
 import { RouterLink, RouterView, useRoute } from 'vue-router'
 import { useAdminStore } from "./store/admin";
+import { useFlashMessageStore } from "./store/flashMessage";
 
 import AdminToggle from "./components/AdminToggle.vue";
+import AdminPannel from "./components/AdminPannel.vue";
 
 import './assets/components/flash-message.css'
 
-const route = useRoute().name
 const adminStore = useAdminStore()
+const flashMessageStore = useFlashMessageStore()
+const route = useRoute().name
 </script>
 
 <template>
   <div class="container">
 
     <header>
-      <div class="flashMessage" :class="adminStore.statusMessage" v-if="adminStore.flashMessage">
-        <p>{{ adminStore.flashMessage }}</p>
+      <div class="flashMessage" :class="flashMessageStore.statusMessage" v-if="flashMessageStore.flashMessage">
+        <p>{{ flashMessageStore.flashMessage }}</p>
       </div>
       <div class="full-menu">
         <nav>
@@ -31,8 +34,8 @@ const adminStore = useAdminStore()
           </div>
         </nav>
         <AdminToggle title="Get admin access" />
-        <div v-if="adminStore.hasAuth" class="admin-pannel">
-          SALUT LES LOUOLOUS
+        <div v-if="adminStore.hasAuth && $route.name == 'events'" class="admin-pannel">
+          <AdminPannel></AdminPannel>
         </div>
       </div>
     </header>
@@ -80,5 +83,6 @@ nav * {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 </style>

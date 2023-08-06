@@ -6,6 +6,7 @@ const EventLayout = () => import(/* webpackChunkName: "event" */ '../views/Event
 const EventDetails = () => import(/* webpackChunkName: "event" */ '../views/event/DetailsView.vue')
 const EventRegister = () => import(/* webpackChunkName: "event" */ '../views/event/RegisterView.vue')
 const EventEdit = () => import(/* webpackChunkName: "event" */ '../views/event/EditView.vue')
+const EventCreate = () => import(/* webpackChunkName: "event-create" */ '../views/EventCreate.vue')
 const NotFound = () => import(/* webpackChunkName: "not-found" */ '../views/NotFound.vue')
 const NetworkError = () => import(/* webpackChunkName: "network-error" */ '../views/NetworkError.vue')
 import EventService from "@/services/EventService"
@@ -62,6 +63,11 @@ const router = createRouter({
           component: EventEdit
         }
       ]
+    },
+    {
+      path: '/create',
+      name: 'create',
+      component: EventCreate
     },
     {
       path: '/:catchAll(.*)',

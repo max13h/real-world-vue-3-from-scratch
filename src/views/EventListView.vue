@@ -89,8 +89,6 @@ export default {
     EventPagination
   }
 }
-
-
 </script>
 
 <template>

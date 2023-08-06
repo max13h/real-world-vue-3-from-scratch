@@ -1,11 +1,14 @@
-import { useAdminStore } from "../store/admin";
+import { useFlashMessageStore } from "../store/flashMessage";
 
-export function useSetFlashMessage(GStore, status, message) {
-  const adminStore = useAdminStore()
-  adminStore.flashMessage = message
-  adminStore.statusMessage = status
+export function useSetFlashMessage(status, message) {
+  const flashMessageStore = useFlashMessageStore()
+
+  flashMessageStore.flashMessage = message
+  flashMessageStore.statusMessage = status
+
   setTimeout(() => {
-    adminStore.flashMessage = ''
-    adminStore.status = ''
-  }, 5000);
+    flashMessageStore.flashMessage = ''
+    flashMessageStore.status = ''
+  }, 3500);
+
 }

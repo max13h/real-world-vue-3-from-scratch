@@ -8,14 +8,12 @@
 
 <script setup>
 import { useRouter } from "vue-router";
-import { inject } from "vue";
 import { useSetFlashMessage } from "@/utils/useSetFlashMessage";
 
 const router = useRouter()
-const GStore = inject('GStore')
 
 const register = () => {
-  useSetFlashMessage(GStore, 'error', "You don't have the permission to modify the event")
+  useSetFlashMessage('error', "You don't have the permission to modify the event")
   router.push({ name: 'event-details' })
 }
 </script>

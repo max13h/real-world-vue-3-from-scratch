@@ -1,6 +1,6 @@
 <template>
   <RouterLink class="card" :to="{ name: 'event-details', params: { id: event.id } }">
-    <div @click="$emit('displayEvent', event.id)">
+    <div>
       <h2>{{ event.title }}</h2>
       <p>@{{ event.date }}</p>
       <p>{{ event.location }}</p>
