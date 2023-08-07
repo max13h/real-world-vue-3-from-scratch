@@ -32,7 +32,9 @@ const location = ref(null)
 const date = ref(null)
 const organizer = ref(null)
 
-const onSubmit = () => {
+const onSubmit = async () => {
+  const { default: dayjs } = await import('dayjs/dayjs.min')
+  const formatedDate = dayjs(date.value).format("YYYY-MM-DD HH:mm")
   eventsStore.personalEventsID++
 
   const newEvent = {
@@ -40,7 +42,7 @@ const onSubmit = () => {
     title: title.value,
     description: description.value,
     location: location.value,
-    date: date.value,
+    date: formatedDate,
     organizer: organizer.value,
   }
 
