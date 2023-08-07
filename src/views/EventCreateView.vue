@@ -44,7 +44,7 @@ const onSubmit = () => {
     organizer: organizer.value,
   }
 
-  eventsStore.personalEvents.push(newEvent)
+  eventsStore.personalEvents.unshift(newEvent)
   router.push({ name: 'events' })
 
 }

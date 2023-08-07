@@ -71,7 +71,7 @@ export default {
   watch: {
     page() {
       this.getEvents()
-    }
+    },
   },
   computed: {
     hasNextPage() {
@@ -89,7 +89,7 @@ export default {
 
 <template>
   <div class="personal-events" v-if="personalEvents && ($route.query.page == 1 || !$route.query.page)">
-    <EventCard class="personal-event" v-for="  personalEvent   in   personalEvents  " :key="personalEvent.id"
+    <EventCard class="personal-event" v-for="personalEvent in personalEvents" :key="personalEvent.id"
       :event="personalEvent">
     </EventCard>
   </div>

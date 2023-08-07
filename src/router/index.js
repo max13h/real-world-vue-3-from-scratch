@@ -36,8 +36,13 @@ const router = createRouter({
       beforeEnter: to => {
         const eventsStore = useEventsStore()
         if (to.params.id > 100000) {
-          eventsStore.event = eventsStore.personalEvents.find(x => x.id == to.params.id)
-          to.params.isPersonalEvent = true
+          const newEvent = eventsStore.personalEvents.find(x => x.id == to.params.id)
+          if (newEvent) {
+            eventsStore.event = newEvent
+            to.params.isPersonalEvent = true
+          } else {
+            return { name: '404-resource', params: { resource: 'event' } }
+          }
         } else {
           return EventService.getEvent(to.params.id)
             .then((response) => {
