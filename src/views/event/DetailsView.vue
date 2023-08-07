@@ -1,15 +1,15 @@
 <template>
-  <div v-if="event" class="card-primary">
-    <h1>{{ event.title }}</h1>
-    <p>The date: {{ event.date }}</p>
-    <p>@ {{ event.location }}</p>
-    <p>{{ event.description }}</p>
+  <div v-if="event" class="card-primary" :class="{ 'isPersonalEvent': event.isPersonalEvent }">
+    <h1>{{ event.data.title }}</h1>
+    <p>The date: {{ event.data.date }}</p>
+    <p>@ {{ event.data.location }}</p>
+    <p>{{ event.data.description }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['event']
+  props: ['event'],
 }
 </script>
 
@@ -20,5 +20,9 @@ h1 {
 
 p:nth-last-child(1) {
   margin-top: 2rem;
+}
+
+.isPersonalEvent {
+  background-color: var(--light-primary);
 }
 </style>

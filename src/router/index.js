@@ -38,16 +38,16 @@ const router = createRouter({
         if (to.params.id > 100000) {
           const newEvent = eventsStore.personalEvents.find(x => x.id == to.params.id)
           if (newEvent) {
-            eventsStore.event = newEvent
-            to.params.isPersonalEvent = true
+            eventsStore.event.data = newEvent
+            eventsStore.event.isPersonalEvent = true
           } else {
             return { name: '404-resource', params: { resource: 'event' } }
           }
         } else {
           return EventService.getEvent(to.params.id)
             .then((response) => {
-              eventsStore.event = response.data
-              to.params.isPersonalEvent = true
+              eventsStore.event.data = response.data
+              eventsStore.event.isPersonalEvent = false
             })
             .catch((error) => {
               if (error.response && error.response.status == 404) {

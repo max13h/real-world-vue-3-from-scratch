@@ -105,6 +105,6 @@ export default {
 }
 
 .personal-event {
-  background-color: rgba(0, 210, 0, 0.194);
+  background-color: var(--light-primary);
 }
 </style>

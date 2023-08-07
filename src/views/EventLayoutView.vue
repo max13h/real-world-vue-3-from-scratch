@@ -14,10 +14,10 @@
 
 <script setup>
 import { useEventsStore } from "../store/events";
-import { defineProps } from "vue";
 
 const eventsStore = useEventsStore()
-defineProps(['id', 'isPersonalEvent'])
+defineProps(['id'])
+
 </script>
 
 <style scoped>

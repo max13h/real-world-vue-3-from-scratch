@@ -25,7 +25,7 @@ defineProps({
   width: 24rem;
   height: 16rem;
   border: 2px solid black;
-  background-color: var(--secondary);
+  background-color: var(--light);
   display: flex;
   flex-direction: column;
   align-items: center;

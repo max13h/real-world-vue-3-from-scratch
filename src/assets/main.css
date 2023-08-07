@@ -130,7 +130,7 @@
   height: 100%;
   padding: 2rem;
   position: relative;
-  background-color: var(--secondary);
+  background-color: var(--light);
   border: 3px black solid;
   border-radius: 10px;
   box-shadow: 5px 5px 1px 1px var(--primary);
