@@ -2,7 +2,8 @@
 import EventCard from "../components/EventCard.vue";
 import EventService from "../services/EventService";
 import EventPagination from "../components/EventPagination.vue";
-import NProgress from 'nprogress'
+import { useEventsStore } from "../store/events";
+import { mapState } from "pinia";
 
 export default {
   data() {
@@ -17,7 +18,6 @@ export default {
     }
   },
   beforeRouteEnter(to, from, next) {
-    NProgress.start()
     EventService.getEvents(4, to.query.page || 1)
       .then((response) => {
         next(comp => {
@@ -34,11 +34,9 @@ export default {
         }
       })
       .finally(() => {
-        NProgress.done()
       })
   },
   beforeRouteUpdate(to) {
-    NProgress.start()
     return EventService.getEvents(4, to.query.page || 1)
       .then((response) => {
         this.events = response.data
@@ -51,9 +49,6 @@ export default {
         } else {
           return { name: 'network-error' }
         }
-      })
-      .finally(() => {
-        NProgress.done()
       })
   },
   methods: {
@@ -82,7 +77,8 @@ export default {
     hasNextPage() {
       const totalPage = this.totalEvents / 4
       return (totalPage - this.page) > 0
-    }
+    },
+    ...mapState(useEventsStore, ['personalEvents'])
   },
   components: {
     EventCard,
@@ -92,7 +88,12 @@ export default {
 </script>
 
 <template>
-  <EventCard v-for="event in events" :key="event.id" :event="event"></EventCard>
+  <div class="personal-events" v-if="personalEvents && ($route.query.page == 1 || !$route.query.page)">
+    <EventCard class="personal-event" v-for="  personalEvent   in   personalEvents  " :key="personalEvent.id"
+      :event="personalEvent">
+    </EventCard>
+  </div>
+  <EventCard v-for="  event   in   events  " :key="event.id" :event="event"></EventCard>
 
   <EventPagination :hasNextPage="hasNextPage" :page="page" :totalEvents="parseInt(totalEvents)" class="event-pagination">
   </EventPagination>
@@ -101,5 +102,9 @@ export default {
 <style scoped>
 .event-pagination {
   margin-bottom: 3rem;
+}
+
+.personal-event {
+  background-color: rgba(0, 210, 0, 0.194);
 }
 </style>

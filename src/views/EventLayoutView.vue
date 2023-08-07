@@ -17,7 +17,7 @@ import { useEventsStore } from "../store/events";
 import { defineProps } from "vue";
 
 const eventsStore = useEventsStore()
-defineProps(['id'])
+defineProps(['id', 'isPersonalEvent'])
 </script>
 
 <style scoped>

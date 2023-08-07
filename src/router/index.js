@@ -35,18 +35,24 @@ const router = createRouter({
       component: EventLayout,
       beforeEnter: to => {
         const eventsStore = useEventsStore()
-        return EventService.getEvent(to.params.id)
-          .then((response) => {
-            eventsStore.event = response.data
-          })
-          .catch((error) => {
-            if (error.response && error.response.status == 404) {
-              console.log(error)
-              return { name: '404-resource', params: { resource: 'event' } }
-            } else {
-              return { name: 'network-error' }
-            }
-          })
+        if (to.params.id > 100000) {
+          eventsStore.event = eventsStore.personalEvents.find(x => x.id == to.params.id)
+          to.params.isPersonalEvent = true
+        } else {
+          return EventService.getEvent(to.params.id)
+            .then((response) => {
+              eventsStore.event = response.data
+              to.params.isPersonalEvent = true
+            })
+            .catch((error) => {
+              if (error.response && error.response.status == 404) {
+                console.log(error)
+                return { name: '404-resource', params: { resource: 'event' } }
+              } else {
+                return { name: 'network-error' }
+              }
+            })
+        }
       },
       children: [
         {
@@ -90,7 +96,7 @@ const router = createRouter({
     }
   ],
   scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) { // <----
+    if (savedPosition) {
       return savedPosition
     } else {
       return { top: 0 }

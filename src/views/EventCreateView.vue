@@ -2,7 +2,7 @@
   <div class="card-primary">
     <h1>Create your event:</h1>
     <p class="beta-warning">Form in BETA (no validation / no best practice)</p>
-    <form>
+    <form @submit.prevent="onSubmit">
       <label for="title">Title:</label>
       <input v-model="title" type="text" name="title">
       <label for="description">Description:</label>
@@ -13,8 +13,7 @@
       <input v-model="date" type="datetime-local" name="date">
       <label for="organizer">Organizer's name</label>
       <input v-model="organizer" type="text" name="organizer">
-      <button type="submit" value="Create your event" class="btn-secondary" data-btn="Create your event"
-        @submit="onSubmit"></button>
+      <button type="submit" value="Create your event" class="btn-secondary" data-btn="Create your event"></button>
     </form>
   </div>
 </template>
@@ -22,15 +21,16 @@
 <script setup>
 import { ref } from 'vue';
 import { useEventsStore } from "../store/events";
+import { useRouter } from 'vue-router';
 
 const eventsStore = useEventsStore()
+const router = useRouter()
 
 const title = ref(null)
 const description = ref(null)
 const location = ref(null)
 const date = ref(null)
 const organizer = ref(null)
-
 
 const onSubmit = () => {
   eventsStore.personalEventsID++
@@ -45,7 +45,8 @@ const onSubmit = () => {
   }
 
   eventsStore.personalEvents.push(newEvent)
-  console.log(eventsStore.personalEvents);
+  router.push({ name: 'events' })
+
 }
 </script>
 

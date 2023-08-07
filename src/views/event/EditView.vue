@@ -2,7 +2,7 @@
   <div>
     <h3>Click to edit this event</h3>
     <br>
-    <button type="button" class="btn-secondary" data-btn="Edit event" @click="register">Edit event</button>
+    <button type="button" class="btn-secondary" data-btn="Edit event" @click="edit">Edit event</button>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ import { useSetFlashMessage } from "@/utils/useSetFlashMessage";
 
 const router = useRouter()
 
-const register = () => {
+const edit = () => {
   useSetFlashMessage('error', "You don't have the permission to modify the event")
   router.push({ name: 'event-details' })
 }
