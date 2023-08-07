@@ -13,20 +13,11 @@
 </template>
 
 <script setup>
-import { useFlashMessageStore } from "../store/flashMessage";
 import { useEventsStore } from "../store/events";
-import { onBeforeRouteLeave } from "vue-router";
 import { defineProps } from "vue";
 
-
-const flashMessageStore = useFlashMessageStore()
 const eventsStore = useEventsStore()
 defineProps(['id'])
-
-onBeforeRouteLeave(() => {
-  flashMessageStore.flashMessage = ''
-  flashMessageStore.statusMessage = ''
-})
 </script>
 
 <style scoped>

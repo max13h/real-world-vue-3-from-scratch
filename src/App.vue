@@ -7,6 +7,7 @@ import AdminToggle from "./components/AdminToggle.vue";
 import AdminPannel from "./components/AdminPannel.vue";
 
 import './assets/components/flash-message.css'
+import { ref, watchEffect } from 'vue';
 
 const adminStore = useAdminStore()
 const flashMessageStore = useFlashMessageStore()
@@ -15,15 +16,23 @@ const route = useRoute().name
 const editHasAuth = (response) => {
   adminStore.hasAuth = response
 }
+
+const flashMessageDOM = ref(null)
+
+watchEffect(() => {
+  if (flashMessageDOM.value) {
+    flashMessageStore.DOMElement = flashMessageDOM.value
+  }
+})
 </script>
 
 <template>
   <div class="container">
-
+    <div class="flashMessage" ref="flashMessageDOM" :class="flashMessageStore.statusMessage"
+      v-if="flashMessageStore.flashMessage" style="animation: flashMessage 3500ms">
+      <p>{{ flashMessageStore.flashMessage }}</p>
+    </div>
     <header>
-      <div class="flashMessage" :class="flashMessageStore.statusMessage" v-if="flashMessageStore.flashMessage">
-        <p>{{ flashMessageStore.flashMessage }}</p>
-      </div>
       <div class="full-menu">
         <nav>
           <div>
