@@ -11,11 +11,11 @@ import { useRouter } from "vue-router";
 import { useSetFlashMessage } from "@/utils/useSetFlashMessage";
 
 const router = useRouter()
-const props = defineProps(['isPersonalEvent'])
+const props = defineProps(['event'])
 
 const edit = () => {
-  if (props.isPersonalEvent) {
-    console.log('redirect to an edit interface');
+  if (props.event && props.event.isPersonalEvent) {
+    router.push({ name: 'event-edit' })
   } else {
     useSetFlashMessage('error', "You don't have the permission to modify the event")
     router.push({ name: 'event-details' })

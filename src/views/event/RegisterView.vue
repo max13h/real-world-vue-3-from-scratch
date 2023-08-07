@@ -11,10 +11,16 @@ import { useRouter } from "vue-router";
 import { useSetFlashMessage } from "../../utils/useSetFlashMessage";
 
 const router = useRouter()
+const props = defineProps(['event'])
 
 const register = () => {
-  useSetFlashMessage('success', 'Successfully registered for the event!')
-  router.push({ name: 'event-details' })
+  if (props.event && props.event.isPersonalEvent) {
+    useSetFlashMessage('error', "You can't register to your own event")
+    router.push({ name: 'event-details' })
+  } else {
+    useSetFlashMessage('success', 'Successfully registered for the event!')
+    router.push({ name: 'event-details' })
+  }
 }
 </script>
 
