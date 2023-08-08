@@ -1,244 +1,170 @@
-{
-  "events": [
-    {
-      "id": 855,
-      "title": "Nihil voluptas ea.",
-      "description": "Ut aut non amet quibusdam.",
-      "location": "Lyndaland",
-      "date": "2023-08-11 05:29",
-      "organizer": "Albertina Feest"
-    },
-    {
-      "id": 107,
-      "title": "Reprehenderit commodi sequi.",
-      "description": "Perferendis qui quia sit voluptates.",
-      "location": "Lylemouth",
-      "date": "2023-10-17 23:54",
-      "organizer": "Mia Romaguera"
-    },
-    {
-      "id": 344,
-      "title": "Nesciunt eum quo.",
-      "description": "Ratione dolorum sit incidunt.",
-      "location": "South Eleanorfurt",
-      "date": "2023-10-14 09:30",
-      "organizer": "Kaley Koss"
-    },
-    {
-      "id": 852,
-      "title": "Natus necessitatibus rem.",
-      "description": "Libero dignissimos dolores laudantium.",
-      "location": "Port Kermit",
-      "date": "2023-10-09 20:20",
-      "organizer": "Dean Kshlerin"
-    },
-    {
-      "id": 496,
-      "title": "In nulla minima.",
-      "description": "Saepe eum dolore sint quos.",
-      "location": "Port Jackiemouth",
-      "date": "2023-11-05 22:27",
-      "organizer": "Amb. Marine Ernser"
-    },
-    {
-      "id": 237,
-      "title": "Odit asperiores magnam.",
-      "description": "Doloribus animi fuga beatae numquam.",
-      "location": "Jakubowskishire",
-      "date": "2023-08-31 18:14",
-      "organizer": "Oscar Reilly"
-    },
-    {
-      "id": 819,
-      "title": "Magnam nisi consequatur.",
-      "description": "Dolorem vel quidem omnis.",
-      "location": "Jonchester",
-      "date": "2023-08-04 06:50",
-      "organizer": "Hilton Marvin"
-    },
-    {
-      "id": 519,
-      "title": "Animi ab cupiditate.",
-      "description": "Voluptatum eos et unde aut.",
-      "location": "Rodrickchester",
-      "date": "2023-10-04 23:27",
-      "organizer": "Dino Buckridge"
-    },
-    {
-      "id": 643,
-      "title": "Quo delectus quasi.",
-      "description": "Rerum facere nihil iure qui.",
-      "location": "Lake Willietown",
-      "date": "2023-10-14 09:43",
-      "organizer": "Olene Reichert II"
-    },
-    {
-      "id": 693,
-      "title": "Iste a et.",
-      "description": "Atque culpa qui vero.",
-      "location": "New Joellen",
-      "date": "2023-08-09 00:01",
-      "organizer": "Thad Wilderman II"
-    },
-    {
-      "id": 880,
-      "title": "Hic ut dolorem.",
-      "description": "Praesentium temporibus cupiditate soluta.",
-      "location": "Lake Loganside",
-      "date": "2023-09-07 23:56",
-      "organizer": "Tomasa Cole IV"
-    },
-    {
-      "id": 253,
-      "title": "Eum similique voluptate.",
-      "description": "Consectetur quia dolor voluptatem placeat.",
-      "location": "East Ali",
-      "date": "2023-09-24 18:52",
-      "organizer": "Randy Hickle"
-    },
-    {
-      "id": 837,
-      "title": "Non qui occaecati.",
-      "description": "Et praesentium vero ad sit.",
-      "location": "New Donovanfurt",
-      "date": "2023-10-06 16:20",
-      "organizer": "Shameka Aufderhar"
-    },
-    {
-      "id": 677,
-      "title": "Voluptates perferendis non.",
-      "description": "Mollitia necessitatibus ullam voluptatibus molestiae.",
-      "location": "McDermottmouth",
-      "date": "2023-10-20 00:49",
-      "organizer": "Raleigh Schuster Jr."
-    },
-    {
-      "id": 264,
-      "title": "Nisi voluptatem optio.",
-      "description": "Ex odio quidem fuga.",
-      "location": "Katymouth",
-      "date": "2023-08-30 17:11",
-      "organizer": "Carroll Cummings"
-    },
-    {
-      "id": 867,
-      "title": "Praesentium vel et.",
-      "description": "Sit nisi officiis ipsum.",
-      "location": "North Weldonchester",
-      "date": "2023-09-17 18:17",
-      "organizer": "Kira Koelpin"
-    },
-    {
-      "id": 41,
-      "title": "Dolor dolores omnis.",
-      "description": "Maxime molestiae necessitatibus nobis.",
-      "location": "Keeblerburgh",
-      "date": "2023-10-03 22:32",
-      "organizer": "Katelin Abernathy"
-    },
-    {
-      "id": 103,
-      "title": "Voluptas quas quam.",
-      "description": "Sit et temporibus sequi dicta.",
-      "location": "Ankundingport",
-      "date": "2023-10-02 08:55",
-      "organizer": "Clinton Tillman"
-    },
-    {
-      "id": 817,
-      "title": "Sunt alias eum.",
-      "description": "Qui mollitia nostrum soluta debitis.",
-      "location": "Darylville",
-      "date": "2023-09-27 08:56",
-      "organizer": "Miss Deana Flatley"
-    },
-    {
-      "id": 355,
-      "title": "Quis repellendus et.",
-      "description": "Harum quia rem vitae.",
-      "location": "South Stefanborough",
-      "date": "2023-09-06 05:24",
-      "organizer": "Jerrold Schimmel"
-    },
-    {
-      "id": 132,
-      "title": "Deserunt ut sunt.",
-      "description": "Ex dolorem incidunt reiciendis similique.",
-      "location": "North Reynaldaton",
-      "date": "2023-08-10 11:03",
-      "organizer": "Moshe Schumm"
-    },
-    {
-      "id": 900,
-      "title": "Rerum laborum omnis.",
-      "description": "Deserunt molestiae sunt eos dolorem.",
-      "location": "New Morgan",
-      "date": "2023-08-19 18:22",
-      "organizer": "Mr. Maud Torphy"
-    },
-    {
-      "id": 717,
-      "title": "Hic saepe sunt.",
-      "description": "Corporis minus a sapiente aut.",
-      "location": "West Calvinview",
-      "date": "2023-08-10 19:35",
-      "organizer": "Alisia Lang III"
-    },
-    {
-      "id": 550,
-      "title": "Tempora ducimus sit.",
-      "description": "Et ut in quibusdam ipsa.",
-      "location": "Yostberg",
-      "date": "2023-10-13 09:42",
-      "organizer": "Gita Koepp"
-    },
-    {
-      "id": 836,
-      "title": "Amet tenetur ipsam.",
-      "description": "Magni aliquam ea nihil.",
-      "location": "North Madelyn",
-      "date": "2023-08-19 07:58",
-      "organizer": "Rev. Danilo Koelpin"
-    },
-    {
-      "id": 983,
-      "title": "Nihil eos voluptatibus.",
-      "description": "Sunt ea unde eligendi.",
-      "location": "Edmondland",
-      "date": "2023-11-06 00:20",
-      "organizer": "Ronald Steuber DO"
-    },
-    {
-      "id": 818,
-      "title": "Nam provident ab.",
-      "description": "Laborum repellendus dolores ut ad.",
-      "location": "Emmettstad",
-      "date": "2023-10-24 21:45",
-      "organizer": "Keturah Ernser"
-    },
-    {
-      "id": 481,
-      "title": "Voluptas et doloremque.",
-      "description": "Dolores cupiditate nostrum et.",
-      "location": "North Lynnamouth",
-      "date": "2023-11-01 14:56",
-      "organizer": "Golden Rath"
-    },
-    {
-      "id": 92,
-      "title": "Reprehenderit quas voluptas.",
-      "description": "Quia consequuntur ea minima.",
-      "location": "Marjoriechester",
-      "date": "2023-10-03 07:07",
-      "organizer": "Holley Kuhic JD"
-    },
-    {
-      "id": 73,
-      "title": "Praesentium corporis aut.",
-      "description": "Qui numquam ipsa voluptate veniam.",
-      "location": "Theoville",
-      "date": "2023-09-23 21:54",
-      "organizer": "Jeffry Marquardt CPA"
-    }
-  ]
-}
+[
+  {
+    "id": 123,
+    "title": "Innovations Summit 2023",
+    "description": "Join us for a day of groundbreaking technology and innovation discussions.",
+    "location": "New York City",
+    "date": "2023-09-15 09:00",
+    "organizer": "InnovateCorp"
+  },
+  {
+    "id": 456,
+    "title": "Art Gala Extravaganza",
+    "description": "Experience an evening of breathtaking art and cultural immersion.",
+    "location": "Paris",
+    "date": "2023-10-20 18:30",
+    "organizer": "Artistry Group"
+  },
+  {
+    "id": 789,
+    "title": "Global Health Forum",
+    "description": "Join health experts from around the world to discuss the latest advancements in healthcare.",
+    "location": "Tokyo",
+    "date": "2023-11-05 10:00",
+    "organizer": "MediCare International"
+  },
+  {
+    "id": 101,
+    "title": "Future of AI Conference",
+    "description": "Explore the frontiers of artificial intelligence and its impact on society.",
+    "location": "San Francisco",
+    "date": "2023-09-30 11:15",
+    "organizer": "TechGenius Corporation"
+  },
+  {
+    "id": 202,
+    "title": "Fashion Forward Expo",
+    "description": "Witness the latest fashion trends and creations from top designers.",
+    "location": "Milan",
+    "date": "2023-10-10 14:00",
+    "organizer": "Couture Innovations"
+  },
+  {
+    "id": 303,
+    "title": "Culinary Masterclass",
+    "description": "Join renowned chefs as they share their culinary expertise and secrets.",
+    "location": "Tokyo",
+    "date": "2023-11-18 13:45",
+    "organizer": "Gourmet Delights Group"
+  },
+  {
+    "id": 404,
+    "title": "Green Energy Symposium",
+    "description": "Explore sustainable energy solutions and their role in combating climate change.",
+    "location": "Berlin",
+    "date": "2023-09-22 10:30",
+    "organizer": "EcoSolutions Ltd."
+  },
+  {
+    "id": 505,
+    "title": "Music Festival Unleashed",
+    "description": "Immerse yourself in a multi-genre music festival featuring international artists.",
+    "location": "Rio de Janeiro",
+    "date": "2023-10-15 16:00",
+    "organizer": "Harmonix Global"
+  },
+  {
+    "id": 606,
+    "title": "Space Exploration Symposium",
+    "description": "Delve into the future of space exploration and the possibilities it holds.",
+    "location": "Houston",
+    "date": "2023-11-10 09:30",
+    "organizer": "Stellar Discoveries Inc."
+  },
+  {
+    "id": 707,
+    "title": "Financial Summit 2023",
+    "description": "Gain insights into the global financial landscape and investment strategies.",
+    "location": "London",
+    "date": "2023-09-25 08:45",
+    "organizer": "Capital Nexus Group"
+  },
+  {
+    "id": 808,
+    "title": "Health and Wellness Expo",
+    "description": "Discover holistic approaches to well-being and healthy living.",
+    "location": "Sydney",
+    "date": "2023-10-05 12:15",
+    "organizer": "Wellness Harmony Corp"
+  },
+  {
+    "id": 909,
+    "title": "Automotive Innovation Showcase",
+    "description": "Witness the future of automobiles with cutting-edge technologies and designs.",
+    "location": "Shanghai",
+    "date": "2023-11-25 15:00",
+    "organizer": "AutoTech Dynamics"
+  },
+  {
+    "id": 111,
+    "title": "Education Forward Conference",
+    "description": "Explore innovative approaches to education and learning in the digital age.",
+    "location": "Singapore",
+    "date": "2023-09-12 11:30",
+    "organizer": "EduVisions Ltd."
+  },
+  {
+    "id": 222,
+    "title": "Adventure Travel Expo",
+    "description": "Plan your next thrilling adventure with travel experts and enthusiasts.",
+    "location": "Cape Town",
+    "date": "2023-10-08 10:00",
+    "organizer": "Wanderlust Expeditions"
+  },
+  {
+    "id": 333,
+    "title": "AI Ethics Symposium",
+    "description": "Discuss the ethical implications of AI and its responsible development.",
+    "location": "Toronto",
+    "date": "2023-11-15 14:30",
+    "organizer": "EthicalTech Solutions"
+  },
+  {
+    "id": 444,
+    "title": "Film Industry Summit",
+    "description": "Join filmmakers, producers, and actors to explore the future of cinema.",
+    "location": "Los Angeles",
+    "date": "2023-09-18 13:00",
+    "organizer": "CineVerse Studios"
+  },
+  {
+    "id": 555,
+    "title": "Sustainable Living Workshop",
+    "description": "Learn practical ways to adopt a sustainable lifestyle and make a positive impact.",
+    "location": "Stockholm",
+    "date": "2023-10-12 16:30",
+    "organizer": "GreenEarth Initiatives"
+  },
+  {
+    "id": 666,
+    "title": "Digital Marketing Expo",
+    "description": "Stay updated on the latest trends and strategies in the world of digital marketing.",
+    "location": "New Delhi",
+    "date": "2023-11-20 09:00",
+    "organizer": "MarketMax Connect"
+  },
+  {
+    "id": 777,
+    "title": "Food and Beverage Showcase",
+    "description": "Experience a diverse range of culinary delights from around the world.",
+    "location": "Paris",
+    "date": "2023-09-28 12:45",
+    "organizer": "Gastronomy Galaxy"
+  },
+  {
+    "id": 888,
+    "title": "Renewable Energy Summit",
+    "description": "Explore the advancements and potential of renewable energy sources.",
+    "location": "Berlin",
+    "date": "2023-10-18 10:15",
+    "organizer": "EcoPower Innovations"
+  },
+  {
+    "id": 999,
+    "title": "Tech Innovators Forum",
+    "description": "Connect with leading tech innovators and discover the future of technology.",
+    "location": "San Francisco",
+    "date": "2023-11-08 14:00",
+    "organizer": "TechVisionaries Corp"
+  }
+]
