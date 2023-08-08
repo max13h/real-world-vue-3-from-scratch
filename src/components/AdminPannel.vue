@@ -8,12 +8,16 @@
 </template>
 
 <script setup>
-import { RouterLink } from "vue-router";
+import { RouterLink, useRoute, useRouter } from "vue-router";
 import { useCreateFakePersonalEvent } from "../utils/useCreateFakePersonalEvent";
+const route = useRoute()
+const router = useRouter()
 
 const createPersonalEvent = () => {
   useCreateFakePersonalEvent()
-
+  if (route.query.page && route.query.page != '1') {
+    router.push({ name: 'events' })
+  }
 }
 </script>
 
