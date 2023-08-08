@@ -1,170 +1,172 @@
-[
-  {
-    "id": 123,
-    "title": "Innovations Summit 2023",
-    "description": "Join us for a day of groundbreaking technology and innovation discussions.",
-    "location": "New York City",
-    "date": "2023-09-15 09:00",
-    "organizer": "InnovateCorp"
-  },
-  {
-    "id": 456,
-    "title": "Art Gala Extravaganza",
-    "description": "Experience an evening of breathtaking art and cultural immersion.",
-    "location": "Paris",
-    "date": "2023-10-20 18:30",
-    "organizer": "Artistry Group"
-  },
-  {
-    "id": 789,
-    "title": "Global Health Forum",
-    "description": "Join health experts from around the world to discuss the latest advancements in healthcare.",
-    "location": "Tokyo",
-    "date": "2023-11-05 10:00",
-    "organizer": "MediCare International"
-  },
-  {
-    "id": 101,
-    "title": "Future of AI Conference",
-    "description": "Explore the frontiers of artificial intelligence and its impact on society.",
-    "location": "San Francisco",
-    "date": "2023-09-30 11:15",
-    "organizer": "TechGenius Corporation"
-  },
-  {
-    "id": 202,
-    "title": "Fashion Forward Expo",
-    "description": "Witness the latest fashion trends and creations from top designers.",
-    "location": "Milan",
-    "date": "2023-10-10 14:00",
-    "organizer": "Couture Innovations"
-  },
-  {
-    "id": 303,
-    "title": "Culinary Masterclass",
-    "description": "Join renowned chefs as they share their culinary expertise and secrets.",
-    "location": "Tokyo",
-    "date": "2023-11-18 13:45",
-    "organizer": "Gourmet Delights Group"
-  },
-  {
-    "id": 404,
-    "title": "Green Energy Symposium",
-    "description": "Explore sustainable energy solutions and their role in combating climate change.",
-    "location": "Berlin",
-    "date": "2023-09-22 10:30",
-    "organizer": "EcoSolutions Ltd."
-  },
-  {
-    "id": 505,
-    "title": "Music Festival Unleashed",
-    "description": "Immerse yourself in a multi-genre music festival featuring international artists.",
-    "location": "Rio de Janeiro",
-    "date": "2023-10-15 16:00",
-    "organizer": "Harmonix Global"
-  },
-  {
-    "id": 606,
-    "title": "Space Exploration Symposium",
-    "description": "Delve into the future of space exploration and the possibilities it holds.",
-    "location": "Houston",
-    "date": "2023-11-10 09:30",
-    "organizer": "Stellar Discoveries Inc."
-  },
-  {
-    "id": 707,
-    "title": "Financial Summit 2023",
-    "description": "Gain insights into the global financial landscape and investment strategies.",
-    "location": "London",
-    "date": "2023-09-25 08:45",
-    "organizer": "Capital Nexus Group"
-  },
-  {
-    "id": 808,
-    "title": "Health and Wellness Expo",
-    "description": "Discover holistic approaches to well-being and healthy living.",
-    "location": "Sydney",
-    "date": "2023-10-05 12:15",
-    "organizer": "Wellness Harmony Corp"
-  },
-  {
-    "id": 909,
-    "title": "Automotive Innovation Showcase",
-    "description": "Witness the future of automobiles with cutting-edge technologies and designs.",
-    "location": "Shanghai",
-    "date": "2023-11-25 15:00",
-    "organizer": "AutoTech Dynamics"
-  },
-  {
-    "id": 111,
-    "title": "Education Forward Conference",
-    "description": "Explore innovative approaches to education and learning in the digital age.",
-    "location": "Singapore",
-    "date": "2023-09-12 11:30",
-    "organizer": "EduVisions Ltd."
-  },
-  {
-    "id": 222,
-    "title": "Adventure Travel Expo",
-    "description": "Plan your next thrilling adventure with travel experts and enthusiasts.",
-    "location": "Cape Town",
-    "date": "2023-10-08 10:00",
-    "organizer": "Wanderlust Expeditions"
-  },
-  {
-    "id": 333,
-    "title": "AI Ethics Symposium",
-    "description": "Discuss the ethical implications of AI and its responsible development.",
-    "location": "Toronto",
-    "date": "2023-11-15 14:30",
-    "organizer": "EthicalTech Solutions"
-  },
-  {
-    "id": 444,
-    "title": "Film Industry Summit",
-    "description": "Join filmmakers, producers, and actors to explore the future of cinema.",
-    "location": "Los Angeles",
-    "date": "2023-09-18 13:00",
-    "organizer": "CineVerse Studios"
-  },
-  {
-    "id": 555,
-    "title": "Sustainable Living Workshop",
-    "description": "Learn practical ways to adopt a sustainable lifestyle and make a positive impact.",
-    "location": "Stockholm",
-    "date": "2023-10-12 16:30",
-    "organizer": "GreenEarth Initiatives"
-  },
-  {
-    "id": 666,
-    "title": "Digital Marketing Expo",
-    "description": "Stay updated on the latest trends and strategies in the world of digital marketing.",
-    "location": "New Delhi",
-    "date": "2023-11-20 09:00",
-    "organizer": "MarketMax Connect"
-  },
-  {
-    "id": 777,
-    "title": "Food and Beverage Showcase",
-    "description": "Experience a diverse range of culinary delights from around the world.",
-    "location": "Paris",
-    "date": "2023-09-28 12:45",
-    "organizer": "Gastronomy Galaxy"
-  },
-  {
-    "id": 888,
-    "title": "Renewable Energy Summit",
-    "description": "Explore the advancements and potential of renewable energy sources.",
-    "location": "Berlin",
-    "date": "2023-10-18 10:15",
-    "organizer": "EcoPower Innovations"
-  },
-  {
-    "id": 999,
-    "title": "Tech Innovators Forum",
-    "description": "Connect with leading tech innovators and discover the future of technology.",
-    "location": "San Francisco",
-    "date": "2023-11-08 14:00",
-    "organizer": "TechVisionaries Corp"
-  }
-]
+{
+  "events": [
+    {
+      "id": 123,
+      "title": "Innovations Summit 2023",
+      "description": "Join us for a day of groundbreaking technology and innovation discussions.",
+      "location": "New York City",
+      "date": "2023-09-15 09:00",
+      "organizer": "InnovateCorp"
+    },
+    {
+      "id": 456,
+      "title": "Art Gala Extravaganza",
+      "description": "Experience an evening of breathtaking art and cultural immersion.",
+      "location": "Paris",
+      "date": "2023-10-20 18:30",
+      "organizer": "Artistry Group"
+    },
+    {
+      "id": 789,
+      "title": "Global Health Forum",
+      "description": "Join health experts from around the world to discuss the latest advancements in healthcare.",
+      "location": "Tokyo",
+      "date": "2023-11-05 10:00",
+      "organizer": "MediCare International"
+    },
+    {
+      "id": 101,
+      "title": "Future of AI Conference",
+      "description": "Explore the frontiers of artificial intelligence and its impact on society.",
+      "location": "San Francisco",
+      "date": "2023-09-30 11:15",
+      "organizer": "TechGenius Corporation"
+    },
+    {
+      "id": 202,
+      "title": "Fashion Forward Expo",
+      "description": "Witness the latest fashion trends and creations from top designers.",
+      "location": "Milan",
+      "date": "2023-10-10 14:00",
+      "organizer": "Couture Innovations"
+    },
+    {
+      "id": 303,
+      "title": "Culinary Masterclass",
+      "description": "Join renowned chefs as they share their culinary expertise and secrets.",
+      "location": "Tokyo",
+      "date": "2023-11-18 13:45",
+      "organizer": "Gourmet Delights Group"
+    },
+    {
+      "id": 404,
+      "title": "Green Energy Symposium",
+      "description": "Explore sustainable energy solutions and their role in combating climate change.",
+      "location": "Berlin",
+      "date": "2023-09-22 10:30",
+      "organizer": "EcoSolutions Ltd."
+    },
+    {
+      "id": 505,
+      "title": "Music Festival Unleashed",
+      "description": "Immerse yourself in a multi-genre music festival featuring international artists.",
+      "location": "Rio de Janeiro",
+      "date": "2023-10-15 16:00",
+      "organizer": "Harmonix Global"
+    },
+    {
+      "id": 606,
+      "title": "Space Exploration Symposium",
+      "description": "Delve into the future of space exploration and the possibilities it holds.",
+      "location": "Houston",
+      "date": "2023-11-10 09:30",
+      "organizer": "Stellar Discoveries Inc."
+    },
+    {
+      "id": 707,
+      "title": "Financial Summit 2023",
+      "description": "Gain insights into the global financial landscape and investment strategies.",
+      "location": "London",
+      "date": "2023-09-25 08:45",
+      "organizer": "Capital Nexus Group"
+    },
+    {
+      "id": 808,
+      "title": "Health and Wellness Expo",
+      "description": "Discover holistic approaches to well-being and healthy living.",
+      "location": "Sydney",
+      "date": "2023-10-05 12:15",
+      "organizer": "Wellness Harmony Corp"
+    },
+    {
+      "id": 909,
+      "title": "Automotive Innovation Showcase",
+      "description": "Witness the future of automobiles with cutting-edge technologies and designs.",
+      "location": "Shanghai",
+      "date": "2023-11-25 15:00",
+      "organizer": "AutoTech Dynamics"
+    },
+    {
+      "id": 111,
+      "title": "Education Forward Conference",
+      "description": "Explore innovative approaches to education and learning in the digital age.",
+      "location": "Singapore",
+      "date": "2023-09-12 11:30",
+      "organizer": "EduVisions Ltd."
+    },
+    {
+      "id": 222,
+      "title": "Adventure Travel Expo",
+      "description": "Plan your next thrilling adventure with travel experts and enthusiasts.",
+      "location": "Cape Town",
+      "date": "2023-10-08 10:00",
+      "organizer": "Wanderlust Expeditions"
+    },
+    {
+      "id": 333,
+      "title": "AI Ethics Symposium",
+      "description": "Discuss the ethical implications of AI and its responsible development.",
+      "location": "Toronto",
+      "date": "2023-11-15 14:30",
+      "organizer": "EthicalTech Solutions"
+    },
+    {
+      "id": 444,
+      "title": "Film Industry Summit",
+      "description": "Join filmmakers, producers, and actors to explore the future of cinema.",
+      "location": "Los Angeles",
+      "date": "2023-09-18 13:00",
+      "organizer": "CineVerse Studios"
+    },
+    {
+      "id": 555,
+      "title": "Sustainable Living Workshop",
+      "description": "Learn practical ways to adopt a sustainable lifestyle and make a positive impact.",
+      "location": "Stockholm",
+      "date": "2023-10-12 16:30",
+      "organizer": "GreenEarth Initiatives"
+    },
+    {
+      "id": 666,
+      "title": "Digital Marketing Expo",
+      "description": "Stay updated on the latest trends and strategies in the world of digital marketing.",
+      "location": "New Delhi",
+      "date": "2023-11-20 09:00",
+      "organizer": "MarketMax Connect"
+    },
+    {
+      "id": 777,
+      "title": "Food and Beverage Showcase",
+      "description": "Experience a diverse range of culinary delights from around the world.",
+      "location": "Paris",
+      "date": "2023-09-28 12:45",
+      "organizer": "Gastronomy Galaxy"
+    },
+    {
+      "id": 888,
+      "title": "Renewable Energy Summit",
+      "description": "Explore the advancements and potential of renewable energy sources.",
+      "location": "Berlin",
+      "date": "2023-10-18 10:15",
+      "organizer": "EcoPower Innovations"
+    },
+    {
+      "id": 999,
+      "title": "Tech Innovators Forum",
+      "description": "Connect with leading tech innovators and discover the future of technology.",
+      "location": "San Francisco",
+      "date": "2023-11-08 14:00",
+      "organizer": "TechVisionaries Corp"
+    }
+  ]
+}
