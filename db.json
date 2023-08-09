@@ -239,14 +239,6 @@
       "location": "Houston",
       "date": "2023-11-20 09:30",
       "organizer": "Galactic Getaways"
-    },
-    {
-      "id": 2323,
-      "title": "Digital Transformation Expo",
-      "description": "Discover strategies and technologies for businesses to thrive in the digital age.",
-      "location": "London",
-      "date": "2023-09-18 11:00",
-      "organizer": "TechAdvantage Solutions"
     }
   ]
 }
