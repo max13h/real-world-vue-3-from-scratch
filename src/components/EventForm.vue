@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form @submit.prevent="props.event ? onSubmitUpdate() : onSubmitCreate()">
+    <form @submit.prevent="props.isCreating ? onSubmitCreate() : onSubmitUpdate()">
       <label for="title">Title:</label>
       <input v-model="title" type="text" name="title">
       <label for="description">Description:</label>
@@ -11,10 +11,11 @@
       <input v-model="date" type="datetime-local" name="date">
       <label for="organizer">Organizer's name</label>
       <input v-model="organizer" type="text" name="organizer">
-      <div class="button-area">
+      <div class="button-area" :style="props.event ? 'justify-content: space-between' : 'justify-content: flex-end'">
         <button v-if="props.event" @click="deleteEvent()" type="button" value="Delete your event"
           class="btn-secondary btn-delete" data-btn="Delete your event"></button>
-        <button type="submit" value="Create your event" class="btn-secondary" data-btn="Create your event"></button>
+        <button type="submit" value="Create your event" class="btn-secondary btn-submit"
+          data-btn="Create your event"></button>
       </div>
 
     </form>
@@ -26,7 +27,7 @@ import { onMounted, ref } from 'vue';
 import { useEventsStore } from "../store/events";
 import { useRouter } from 'vue-router';
 
-const props = defineProps(['event'])
+const props = defineProps(['event', 'isCreating'])
 const eventsStore = useEventsStore()
 const router = useRouter()
 
@@ -51,7 +52,7 @@ const onSubmitCreate = async () => {
   }
 
   eventsStore.personalEvents.unshift(newEvent)
-  router.push({ name: 'event-details' })
+  router.push({ name: 'event-details', params: { id: newEvent.id } })
 
 }
 

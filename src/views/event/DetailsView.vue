@@ -3,6 +3,7 @@
     <h1>{{ event.data.title }}</h1>
     <p>The date: {{ event.data.date }}</p>
     <p>@ {{ event.data.location }}</p>
+    <p>By {{ event.data.organizer }}</p>
     <p>{{ event.data.description }}</p>
   </div>
 </template>

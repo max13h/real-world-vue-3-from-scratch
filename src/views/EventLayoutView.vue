@@ -13,16 +13,11 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue";
 import { useEventsStore } from "../store/events";
 
 const eventsStore = useEventsStore()
-const props = defineProps(['id'])
+defineProps(['id'])
 
-onMounted(() => {
-  console.log(props.id);
-  console.log(eventsStore.personalEvents);
-})
 
 </script>
 

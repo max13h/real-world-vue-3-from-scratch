@@ -2,7 +2,7 @@
   <div class="card-primary">
     <h1>Create your event:</h1>
     <p class="beta-warning">Form in BETA (no validation / no best practice)</p>
-    <EventForm></EventForm>
+    <EventForm isCreating="true"></EventForm>
   </div>
 </template>
 

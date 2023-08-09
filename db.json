@@ -167,6 +167,86 @@
       "location": "San Francisco",
       "date": "2023-11-08 14:00",
       "organizer": "TechVisionaries Corp"
+    },
+    {
+      "id": 234,
+      "title": "Global Sustainability Summit",
+      "description": "Join experts in discussing sustainable practices for a greener future.",
+      "location": "Singapore",
+      "date": "2023-09-20 09:30",
+      "organizer": "EcoSolutions Global"
+    },
+    {
+      "id": 567,
+      "title": "Fashion Tech Expo",
+      "description": "Explore the fusion of fashion and technology through innovative designs.",
+      "location": "Tokyo",
+      "date": "2023-10-25 15:00",
+      "organizer": "StyleTech Innovations"
+    },
+    {
+      "id": 890,
+      "title": "Healthcare Innovations Symposium",
+      "description": "Discover groundbreaking advancements in medical technology and care.",
+      "location": "Boston",
+      "date": "2023-11-10 10:30",
+      "organizer": "MedTech Solutions"
+    },
+    {
+      "id": 1111,
+      "title": "Culinary Fusion Festival",
+      "description": "Experience a cultural blend of flavors and cuisines from around the world.",
+      "location": "New Orleans",
+      "date": "2023-09-15 17:00",
+      "organizer": "FlavorFusion Events"
+    },
+    {
+      "id": 1313,
+      "title": "Blockchain Innovation Conference",
+      "description": "Explore the potential applications and challenges of blockchain technology.",
+      "location": "Zurich",
+      "date": "2023-10-30 11:45",
+      "organizer": "BlockTech Insights"
+    },
+    {
+      "id": 1515,
+      "title": "Artificial Reality Expo",
+      "description": "Dive into the world of augmented and virtual reality in this immersive event.",
+      "location": "Los Angeles",
+      "date": "2023-11-15 14:30",
+      "organizer": "VirtualRealm Technologies"
+    },
+    {
+      "id": 1717,
+      "title": "Traveler's Adventure Summit",
+      "description": "Connect with fellow travelers and share stories of epic journeys and discoveries.",
+      "location": "Cape Town",
+      "date": "2023-09-25 10:00",
+      "organizer": "Wanderlust Society"
+    },
+    {
+      "id": 1919,
+      "title": "Eco-friendly Living Workshop",
+      "description": "Learn practical tips for adopting an eco-conscious lifestyle for a better planet.",
+      "location": "Stockholm",
+      "date": "2023-10-10 13:15",
+      "organizer": "GreenEarth Initiative"
+    },
+    {
+      "id": 2121,
+      "title": "Space Tourism Forum",
+      "description": "Explore the future of commercial space travel and its potential impact.",
+      "location": "Houston",
+      "date": "2023-11-20 09:30",
+      "organizer": "Galactic Getaways"
+    },
+    {
+      "id": 2323,
+      "title": "Digital Transformation Expo",
+      "description": "Discover strategies and technologies for businesses to thrive in the digital age.",
+      "location": "London",
+      "date": "2023-09-18 11:00",
+      "organizer": "TechAdvantage Solutions"
     }
   ]
 }

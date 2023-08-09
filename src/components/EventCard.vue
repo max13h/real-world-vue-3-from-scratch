@@ -2,6 +2,7 @@
   <RouterLink class="card" :to="{ name: 'event-details', params: { id: event.id } }">
     <div>
       <h2>{{ event.title }}</h2>
+      <p class="organizer">By {{ event.organizer }}</p>
       <p>@{{ event.date }}</p>
       <p>{{ event.location }}</p>
     </div>
@@ -56,5 +57,9 @@ defineProps({
 h2 {
   padding: 1rem;
   font-size: 2rem;
+}
+
+.organizer {
+  margin-bottom: 1rem;
 }
 </style>

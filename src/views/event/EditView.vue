@@ -19,7 +19,7 @@ import { ref } from "vue";
 import EventForm from "../../components/EventForm.vue";
 const router = useRouter()
 const props = defineProps(['event'])
-const isEditing = ref(true)
+const isEditing = ref(false)
 
 const edit = () => {
   if (props.event && props.event.isPersonalEvent) {
